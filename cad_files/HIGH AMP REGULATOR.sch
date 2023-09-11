@@ -1,0 +1,373 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Regulator_Switching:LM2576HVS-ADJ U1
+U 1 1 5F75C5AA
+P 950 1400
+F 0 "U1" H 950 1767 50  0000 C CNN
+F 1 "LM2576HVS-ADJ" H 950 1676 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:TO-263-5_TabPin3" H 950 1150 50  0001 L CIN
+F 3 "http://www.ti.com/lit/ds/symlink/lm2576.pdf" H 950 1400 50  0001 C CNN
+	1    950  1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+VDC #PWR0101
+U 1 1 5F75D14A
+P 350 1250
+F 0 "#PWR0101" H 350 1150 50  0001 C CNN
+F 1 "+VDC" H 350 1525 50  0000 C CNN
+F 2 "" H 350 1250 50  0001 C CNN
+F 3 "" H 350 1250 50  0001 C CNN
+	1    350  1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0102
+U 1 1 5F75DB77
+P 350 1550
+F 0 "#PWR0102" H 350 1300 50  0001 C CNN
+F 1 "GND" H 355 1377 50  0000 C CNN
+F 2 "" H 350 1550 50  0001 C CNN
+F 3 "" H 350 1550 50  0001 C CNN
+	1    350  1550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	350  1300 450  1300
+Wire Wire Line
+	350  1300 350  1250
+Wire Wire Line
+	450  1500 350  1500
+Wire Wire Line
+	350  1500 350  1550
+$Comp
+L power:GND #PWR0103
+U 1 1 5F75E81D
+P 950 1700
+F 0 "#PWR0103" H 950 1450 50  0001 C CNN
+F 1 "GND" H 955 1527 50  0000 C CNN
+F 2 "" H 950 1700 50  0001 C CNN
+F 3 "" H 950 1700 50  0001 C CNN
+	1    950  1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Diode:1N5822 D1
+U 1 1 5F75ED00
+P 1650 1650
+F 0 "D1" V 1604 1729 50  0000 L CNN
+F 1 "1N5822" V 1695 1729 50  0000 L CNN
+F 2 "Diode_SMD:D_SMC" H 1650 1475 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88526/1n5820.pdf" H 1650 1650 50  0001 C CNN
+	1    1650 1650
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:CP1_Small C2
+U 1 1 5F75F6C5
+P 2650 1600
+F 0 "C2" H 2741 1646 50  0000 L CNN
+F 1 "470uF" H 2741 1555 50  0000 L CNN
+F 2 "EvezorLIB:CAPACITOR_12x" H 2650 1600 50  0001 C CNN
+F 3 "~" H 2650 1600 50  0001 C CNN
+	1    2650 1600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Screw_Terminal_01x02 J1
+U 1 1 5F760503
+P -1700 1450
+F 0 "J1" H -1782 1667 50  0000 C CNN
+F 1 "Screw_Terminal_01x02" H -1782 1576 50  0000 C CNN
+F 2 "Connector_Phoenix_MC:PhoenixContact_MC_1,5_2-G-3.81_1x02_P3.81mm_Horizontal" H -1700 1450 50  0001 C CNN
+F 3 "~" H -1700 1450 50  0001 C CNN
+	1    -1700 1450
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:+VDC #PWR0104
+U 1 1 5F761AD0
+P -1050 1450
+F 0 "#PWR0104" H -1050 1350 50  0001 C CNN
+F 1 "+VDC" H -1050 1725 50  0000 C CNN
+F 2 "" H -1050 1450 50  0001 C CNN
+F 3 "" H -1050 1450 50  0001 C CNN
+	1    -1050 1450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	-1500 1450 -1050 1450
+Text Label 1850 1300 2    50   ~ 0
+FEEDBACK
+Wire Wire Line
+	1450 1300 1850 1300
+$Comp
+L pspice:INDUCTOR L1
+U 1 1 5F76FDFF
+P 2250 1500
+F 0 "L1" H 2250 1600 50  0000 C CNN
+F 1 "150uH" H 2250 1450 50  0000 C CNN
+F 2 "EvezorLIB:INDUCTOR_13.5x12.5x5.7" H 2250 1500 50  0001 C CNN
+F 3 "~" H 2250 1500 50  0001 C CNN
+	1    2250 1500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1450 1500 1650 1500
+Wire Wire Line
+	1650 1500 2000 1500
+Connection ~ 1650 1500
+Wire Wire Line
+	2500 1500 2650 1500
+Wire Wire Line
+	2650 1500 3000 1500
+Connection ~ 2650 1500
+$Comp
+L power:GND #PWR0111
+U 1 1 5F773C58
+P 1650 1800
+F 0 "#PWR0111" H 1650 1550 50  0001 C CNN
+F 1 "GND" H 1655 1627 50  0000 C CNN
+F 2 "" H 1650 1800 50  0001 C CNN
+F 3 "" H 1650 1800 50  0001 C CNN
+	1    1650 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0112
+U 1 1 5F774095
+P 2650 1700
+F 0 "#PWR0112" H 2650 1450 50  0001 C CNN
+F 1 "GND" H 2655 1527 50  0000 C CNN
+F 2 "" H 2650 1700 50  0001 C CNN
+F 3 "" H 2650 1700 50  0001 C CNN
+	1    2650 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP1_Small C1
+U 1 1 5F779CA2
+P -450 1450
+F 0 "C1" H -359 1496 50  0000 L CNN
+F 1 "100uF" H -359 1405 50  0000 L CNN
+F 2 "Capacitor_SMD:CP_Elec_10x10" H -450 1450 50  0001 C CNN
+F 3 "~" H -450 1450 50  0001 C CNN
+	1    -450 1450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	350  1300 -50  1300
+Wire Wire Line
+	-450 1300 -450 1350
+Connection ~ 350  1300
+$Comp
+L power:GND #PWR0113
+U 1 1 5F5BA78E
+P -450 1650
+F 0 "#PWR0113" H -450 1400 50  0001 C CNN
+F 1 "GND" H -445 1477 50  0000 C CNN
+F 2 "" H -450 1650 50  0001 C CNN
+F 3 "" H -450 1650 50  0001 C CNN
+	1    -450 1650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	-450 1550 -450 1650
+Text Label 3000 1000 3    50   ~ 0
+HV_REG_OUT
+Wire Wire Line
+	3000 1500 3000 1000
+Wire Wire Line
+	-1050 1550 -1500 1550
+$Comp
+L power:GND #PWR0105
+U 1 1 5F76212C
+P -1050 1550
+F 0 "#PWR0105" H -1050 1300 50  0001 C CNN
+F 1 "GND" H -1045 1377 50  0000 C CNN
+F 2 "" H -1050 1550 50  0001 C CNN
+F 3 "" H -1050 1550 50  0001 C CNN
+	1    -1050 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C3
+U 1 1 5FD9BCDA
+P -50 1400
+F 0 "C3" H 42  1446 50  0000 L CNN
+F 1 ".1uF" H 42  1355 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H -50 1400 50  0001 C CNN
+F 3 "~" H -50 1400 50  0001 C CNN
+	1    -50  1400
+	1    0    0    -1  
+$EndComp
+Connection ~ -50  1300
+$Comp
+L power:GND #PWR0106
+U 1 1 5FD9C7C7
+P -50 1550
+F 0 "#PWR0106" H -50 1300 50  0001 C CNN
+F 1 "GND" H -45 1377 50  0000 C CNN
+F 2 "" H -50 1550 50  0001 C CNN
+F 3 "" H -50 1550 50  0001 C CNN
+	1    -50  1550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	-450 1300 -50  1300
+Wire Wire Line
+	-50  1550 -50  1500
+$Comp
+L Device:R_Small R1
+U 1 1 5FD9D648
+P 1500 3000
+F 0 "R1" H 1559 3046 50  0000 L CNN
+F 1 "330" H 1559 2955 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 1500 3000 50  0001 C CNN
+F 3 "~" H 1500 3000 50  0001 C CNN
+	1    1500 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C4
+U 1 1 5FD9D9E4
+P 1800 2300
+F 0 "C4" V 2029 2300 50  0000 C CNN
+F 1 ".1uF" V 1938 2300 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 1800 2300 50  0001 C CNN
+F 3 "~" H 1800 2300 50  0001 C CNN
+	1    1800 2300
+	0    -1   -1   0   
+$EndComp
+Text Label 1000 2650 0    50   ~ 0
+FEEDBACK
+Text Label 2700 2650 2    50   ~ 0
+HV_REG_OUT
+$Comp
+L Device:R_POT_Small RV1
+U 1 1 5FD9E9DE
+P 1800 2650
+F 0 "RV1" V 1603 2650 50  0000 C CNN
+F 1 "10k" V 1694 2650 50  0000 C CNN
+F 2 "Potentiometer_THT:Potentiometer_Bourns_3296W_Vertical" H 1800 2650 50  0001 C CNN
+F 3 "~" H 1800 2650 50  0001 C CNN
+	1    1800 2650
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1900 2650 2150 2650
+Wire Wire Line
+	1900 2300 2150 2300
+Wire Wire Line
+	2150 2300 2150 2650
+Connection ~ 2150 2650
+Wire Wire Line
+	2150 2650 2700 2650
+Wire Wire Line
+	1000 2650 1450 2650
+Wire Wire Line
+	1700 2300 1450 2300
+Wire Wire Line
+	1450 2300 1450 2650
+Connection ~ 1450 2650
+Wire Wire Line
+	1450 2650 1500 2650
+Wire Wire Line
+	1500 2650 1500 2750
+Connection ~ 1500 2650
+Wire Wire Line
+	1500 2650 1700 2650
+Wire Wire Line
+	1800 2750 1500 2750
+Connection ~ 1500 2750
+Wire Wire Line
+	1500 2750 1500 2900
+$Comp
+L power:GND #PWR0107
+U 1 1 5FDA29F4
+P 1500 3100
+F 0 "#PWR0107" H 1500 2850 50  0001 C CNN
+F 1 "GND" H 1505 2927 50  0000 C CNN
+F 2 "" H 1500 3100 50  0001 C CNN
+F 3 "" H 1500 3100 50  0001 C CNN
+	1    1500 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Screw_Terminal_01x02 J2
+U 1 1 5FDB5704
+P -1700 2550
+F 0 "J2" H -1782 2767 50  0000 C CNN
+F 1 "Screw_Terminal_01x02" H -1782 2676 50  0000 C CNN
+F 2 "Connector_Phoenix_MC:PhoenixContact_MC_1,5_2-G-3.81_1x02_P3.81mm_Horizontal" H -1700 2550 50  0001 C CNN
+F 3 "~" H -1700 2550 50  0001 C CNN
+	1    -1700 2550
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	-1050 2650 -1500 2650
+$Comp
+L power:GND #PWR0108
+U 1 1 5FDB571A
+P -1050 2650
+F 0 "#PWR0108" H -1050 2400 50  0001 C CNN
+F 1 "GND" H -1045 2477 50  0000 C CNN
+F 2 "" H -1050 2650 50  0001 C CNN
+F 3 "" H -1050 2650 50  0001 C CNN
+	1    -1050 2650
+	1    0    0    -1  
+$EndComp
+Text Label -1050 2550 2    50   ~ 0
+HV_REG_OUT
+$Comp
+L Device:R_Small R2
+U 1 1 5FDBE92F
+P -700 2650
+F 0 "R2" H -641 2696 50  0000 L CNN
+F 1 "100k" H -641 2605 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H -700 2650 50  0001 C CNN
+F 3 "~" H -700 2650 50  0001 C CNN
+	1    -700 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D2
+U 1 1 5FDBF506
+P -700 3000
+F 0 "D2" V -661 2883 50  0000 R CNN
+F 1 "LED" V -752 2883 50  0000 R CNN
+F 2 "LED_SMD:LED_0603_1608Metric" H -700 3000 50  0001 C CNN
+F 3 "~" H -700 3000 50  0001 C CNN
+	1    -700 3000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR0109
+U 1 1 5FDC014E
+P -700 3150
+F 0 "#PWR0109" H -700 2900 50  0001 C CNN
+F 1 "GND" H -695 2977 50  0000 C CNN
+F 2 "" H -700 3150 50  0001 C CNN
+F 3 "" H -700 3150 50  0001 C CNN
+	1    -700 3150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	-1500 2550 -700 2550
+Wire Wire Line
+	-700 2750 -700 2850
+$EndSCHEMATC
