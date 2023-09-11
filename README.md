@@ -3,18 +3,15 @@
 
 An edge board containing 3 low power mosfets capable of powering small loads like relays, small fans and LEDs. Also 3 buttons.  Each output may be pulse width modulated.  Power can come from the bus or external sources, selectable by jumper.
 
-![sm]()
+![sm](https://github.com/evezor/v0_regulator_board/blob/main/pics/sm.PNG)
 
-![front]()
+![front](https://github.com/evezor/v0_regulator_board/blob/main/pics/front.PNG)
 
-![back]()
+![back](https://github.com/evezor/v0_regulator_board/blob/main/pics/back.PNG)
 
-![copper]()
+![copper](https://github.com/evezor/v0_regulator_board/blob/main/pics/copper.PNG)
 
-![sch]()
-
-
-source files can be found here: 
+source files can be found here: https://github.com/evezor/v0_regulator_board
 
 This board uses the Evezor Stamp STMF405 MCU
 
