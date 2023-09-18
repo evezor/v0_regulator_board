@@ -1,7 +1,7 @@
 # Voltage Regulator Board
 *please note this board has been deprecated.
 
-An edge board with an adjustabe voltage regualtor circuit cabable of supplying 2A of current
+An edge board with an adjustable voltage regulator circuit capable of supplying 2A of current​
 
 ![sm](https://github.com/evezor/v0_regulator_board/blob/main/pics/sm.PNG)
 
